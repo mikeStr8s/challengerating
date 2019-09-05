@@ -1,2 +1,2 @@
 # challengerating
-Encounter builder and manager for Dungeons and Dragons
+Dungeons and Dragons management aid
