@@ -1,6 +1,11 @@
 version: '3.7'
 
 services:
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file: .env.db
   web:
     build: ./app
     command: python /usr/src/app/manage.py runserver 0.0.0.0:8000
@@ -14,11 +19,6 @@ services:
     depends_on:
       - db
     restart: always
-  db:
-    image: postgres
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    env_file: .env.db
 
 volumes:
   postgres_data:
