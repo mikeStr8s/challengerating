@@ -1,0 +1,480 @@
+[{
+    "model": "api.movementtype",
+    "pk": 1,
+    "fields": {
+        "name": "Climbing"
+    }
+}, {
+    "model": "api.movementtype",
+    "pk": 2,
+    "fields": {
+        "name": "Swimming"
+    }
+}, {
+    "model": "api.movementtype",
+    "pk": 3,
+    "fields": {
+        "name": "Crawling"
+    }
+}, {
+    "model": "api.movementtype",
+    "pk": 4,
+    "fields": {
+        "name": "Flying"
+    }
+}, {
+    "model": "api.movementtype",
+    "pk": 5,
+    "fields": {
+        "name": "Burrowing"
+    }
+}, {
+    "model": "api.abilityscore",
+    "pk": 1,
+    "fields": {
+        "name": "Strength"
+    }
+}, {
+    "model": "api.abilityscore",
+    "pk": 2,
+    "fields": {
+        "name": "Dexterity"
+    }
+}, {
+    "model": "api.abilityscore",
+    "pk": 3,
+    "fields": {
+        "name": "Constitution"
+    }
+}, {
+    "model": "api.abilityscore",
+    "pk": 4,
+    "fields": {
+        "name": "Intelligence"
+    }
+}, {
+    "model": "api.abilityscore",
+    "pk": 5,
+    "fields": {
+        "name": "Wisdom"
+    }
+}, {
+    "model": "api.abilityscore",
+    "pk": 6,
+    "fields": {
+        "name": "Charisma"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 1,
+    "fields": {
+        "name": "Athletics"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 2,
+    "fields": {
+        "name": "Acrobatics"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 3,
+    "fields": {
+        "name": "Sleight of Hand"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 4,
+    "fields": {
+        "name": "Stealth"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 5,
+    "fields": {
+        "name": "Arcana"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 6,
+    "fields": {
+        "name": "History"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 7,
+    "fields": {
+        "name": "Investigation"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 8,
+    "fields": {
+        "name": "Nature"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 9,
+    "fields": {
+        "name": "Religion"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 10,
+    "fields": {
+        "name": "Animal Handling"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 11,
+    "fields": {
+        "name": "Insight"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 12,
+    "fields": {
+        "name": "Medicine"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 13,
+    "fields": {
+        "name": "Perception"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 14,
+    "fields": {
+        "name": "Survival"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 15,
+    "fields": {
+        "name": "Deception"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 16,
+    "fields": {
+        "name": "Intimidation"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 17,
+    "fields": {
+        "name": "Performance"
+    }
+}, {
+    "model": "api.skill",
+    "pk": 18,
+    "fields": {
+        "name": "Persuasion"
+    }
+}, {
+    "model": "api.sense",
+    "pk": 1,
+    "fields": {
+        "name": "Blindsight"
+    }
+}, {
+    "model": "api.sense",
+    "pk": 2,
+    "fields": {
+        "name": "Darkvision"
+    }
+}, {
+    "model": "api.sense",
+    "pk": 3,
+    "fields": {
+        "name": "Truesight"
+    }
+}, {
+    "model": "api.sense",
+    "pk": 4,
+    "fields": {
+        "name": "Tremorsense"
+    }
+}, {
+    "model": "api.language",
+    "pk": 1,
+    "fields": {
+        "name": "Common"
+    }
+}, {
+    "model": "api.language",
+    "pk": 2,
+    "fields": {
+        "name": "Dwarvish"
+    }
+}, {
+    "model": "api.language",
+    "pk": 3,
+    "fields": {
+        "name": "Elvish"
+    }
+}, {
+    "model": "api.language",
+    "pk": 4,
+    "fields": {
+        "name": "Giant"
+    }
+}, {
+    "model": "api.language",
+    "pk": 5,
+    "fields": {
+        "name": "Gnomish"
+    }
+}, {
+    "model": "api.language",
+    "pk": 6,
+    "fields": {
+        "name": "Goblin"
+    }
+}, {
+    "model": "api.language",
+    "pk": 7,
+    "fields": {
+        "name": "Halfling"
+    }
+}, {
+    "model": "api.language",
+    "pk": 8,
+    "fields": {
+        "name": "Orc"
+    }
+}, {
+    "model": "api.language",
+    "pk": 9,
+    "fields": {
+        "name": "Abyssal"
+    }
+}, {
+    "model": "api.language",
+    "pk": 10,
+    "fields": {
+        "name": "Celestial"
+    }
+}, {
+    "model": "api.language",
+    "pk": 11,
+    "fields": {
+        "name": "Draconic"
+    }
+}, {
+    "model": "api.language",
+    "pk": 12,
+    "fields": {
+        "name": "Deep Speech"
+    }
+}, {
+    "model": "api.language",
+    "pk": 13,
+    "fields": {
+        "name": "Infernal"
+    }
+}, {
+    "model": "api.language",
+    "pk": 14,
+    "fields": {
+        "name": "Primordial"
+    }
+}, {
+    "model": "api.language",
+    "pk": 15,
+    "fields": {
+        "name": "Sylvan"
+    }
+}, {
+    "model": "api.language",
+    "pk": 16,
+    "fields": {
+        "name": "Undercommon"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 1,
+    "fields": {
+        "name": "Blinded"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 2,
+    "fields": {
+        "name": "Charmed"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 3,
+    "fields": {
+        "name": "Deafened"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 4,
+    "fields": {
+        "name": "Exhaustion"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 5,
+    "fields": {
+        "name": "Frightened"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 6,
+    "fields": {
+        "name": "Grappled"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 7,
+    "fields": {
+        "name": "Icapacitated"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 8,
+    "fields": {
+        "name": "Invisible"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 9,
+    "fields": {
+        "name": "Paralyzed"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 10,
+    "fields": {
+        "name": "Petrified"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 11,
+    "fields": {
+        "name": "Poisoned"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 12,
+    "fields": {
+        "name": "Prone"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 13,
+    "fields": {
+        "name": "Restrained"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 14,
+    "fields": {
+        "name": "Stunned"
+    }
+}, {
+    "model": "api.condition",
+    "pk": 15,
+    "fields": {
+        "name": "Unconcious"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 1,
+    "fields": {
+        "name": "Acid"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 2,
+    "fields": {
+        "name": "Bludgeoning"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 3,
+    "fields": {
+        "name": "Cold"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 4,
+    "fields": {
+        "name": "Fire"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 5,
+    "fields": {
+        "name": "Force"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 6,
+    "fields": {
+        "name": "Lightning"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 7,
+    "fields": {
+        "name": "Necrotic"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 8,
+    "fields": {
+        "name": "Peircing"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 9,
+    "fields": {
+        "name": "Poison"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 10,
+    "fields": {
+        "name": "Psychic"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 11,
+    "fields": {
+        "name": "Radiant"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 12,
+    "fields": {
+        "name": "Slashing"
+    }
+}, {
+    "model": "api.damagetype",
+    "pk": 13,
+    "fields": {
+        "name": "Thunder"
+    }
+}, {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$AMvuMv4VeZR5$BgjWlU5Gf0RR4z24k6xJRFRc21g2x+awZEW2TyuEb4U=",
+        "last_login": "2019-09-10T17:28:04.872Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "michaelhstrating@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-09-10T17:28:01.479Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}]
