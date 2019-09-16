@@ -20,6 +20,9 @@ class Monster(models.Model):
     reactions = models.TextField(null=True, blank=True)
     img_url = models.CharField(max_length=255, null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
 
 class ArmorClass(models.Model):
     """
@@ -31,6 +34,11 @@ class ArmorClass(models.Model):
 
     class Meta:
         verbose_name_plural = 'armor classes'
+    
+    def __str__(self):
+        if self.note:
+            return '{0} - {1}'.format(self.value, self.note)
+        return self.value
 
 
 class MovementType(models.Model):
@@ -40,6 +48,9 @@ class MovementType(models.Model):
     """
     name = models.CharField(max_length=25)
 
+    def __str__(self):
+        return self.name
+
 
 class MonsterMovementSpeed(models.Model):
     """
@@ -48,7 +59,10 @@ class MonsterMovementSpeed(models.Model):
     """
     monster = models.ForeignKey('Monster', on_delete=models.CASCADE, related_name='speeds')
     movement_type = models.ForeignKey('MovementType', on_delete=models.CASCADE)
-    value = models.IntegerField(null=True, blank=True)
+    value = models.IntegerField()
+
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.movement_type.name, self.value)
 
 
 class AbilityScore(models.Model):
@@ -57,6 +71,9 @@ class AbilityScore(models.Model):
     Example: { name: 'Constitution' }
     """
     name = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.name
 
 
 class MonsterSavingThrow(models.Model):
@@ -68,12 +85,18 @@ class MonsterSavingThrow(models.Model):
     ability_score = models.ForeignKey('AbilityScore', on_delete=models.CASCADE)
     value = models.IntegerField()
 
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.ability_score.name, self.value)
+
 
 class Skill(models.Model):
     """
     Lookup table for skills in Dungeons and Dragons
     """
     name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.name
 
 
 class MonsterSkill(models.Model):
@@ -85,12 +108,18 @@ class MonsterSkill(models.Model):
     skill = models.ForeignKey('Skill', on_delete=models.CASCADE)
     value = models.IntegerField()
 
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.skill.name, self.value)
+
 
 class Sense(models.Model):
     """
     Lookup table for senses in Dungeons and Dragons
     """
     name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.name
 
 
 class MonsterSense(models.Model):
@@ -102,12 +131,18 @@ class MonsterSense(models.Model):
     sense = models.ForeignKey('Sense', on_delete=models.CASCADE)
     note = models.CharField(max_length=255)
 
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.sense.name, self.note)
+
 
 class Language(models.Model):
     """
     Lookup table for languages in Dungeons and Dragons
     """
     name = models.CharField(max_length=25)
+    
+    def __str__(self):
+        return self.name
 
 
 class MonsterLanguage(models.Model):
@@ -119,12 +154,20 @@ class MonsterLanguage(models.Model):
     language = models.ForeignKey('Language', on_delete=models.CASCADE)
     note = models.CharField(max_length=255, null=True, blank=True)
 
+    def __str__(self):
+        if self.note:
+            return '{0}: {1} - {2}'.format(self.monster.name, self.language.name, self.note)
+        return '{0}: {1}'.format(self.monster.name, self.language.name)
+
 
 class Condition(models.Model):
     """
     Lookup table for conditions in Dungeons and Dragons
     """
     name = models.CharField(max_length=25)
+    
+    def __str__(self):
+        return self.name
 
 
 class DamageType(models.Model):
@@ -132,6 +175,9 @@ class DamageType(models.Model):
     Lookup table for damage types in Dungeons and Dragons
     """
     name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.name
 
 
 class MonsterDamageImmunity(models.Model):
@@ -145,6 +191,9 @@ class MonsterDamageImmunity(models.Model):
 
     class Meta:
         verbose_name_plural = 'monster damage immunities'
+    
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.damage.name, self.note)
 
 
 class MonsterDamageResistance(models.Model):
@@ -155,6 +204,9 @@ class MonsterDamageResistance(models.Model):
     monster = models.ForeignKey('Monster', on_delete=models.CASCADE, related_name='resistances')
     damage = models.ForeignKey('DamageType', on_delete=models.CASCADE)
     note = models.CharField(max_length=255)
+
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.damage.name, self.note)
 
 
 class MonsterDamageVulnerability(models.Model):
@@ -168,3 +220,6 @@ class MonsterDamageVulnerability(models.Model):
 
     class Meta:
         verbose_name_plural = 'monster damage vulnerabilities'
+    
+    def __str__(self):
+        return '{0}: {1} - {2}'.format(self.monster.name, self.damage.name, self.note)
