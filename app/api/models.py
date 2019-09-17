@@ -13,7 +13,7 @@ class Monster(models.Model):
     CHA = models.IntegerField()
     challenge = models.IntegerField()
     experience = models.IntegerField()
-    condition_immunities = models.ManyToManyField('Condition', related_name='monsters', null=True, blank=True)
+    condition_immunities = models.ManyToManyField('Condition', related_name='monsters', blank=True)
     traits = models.TextField(null=True, blank=True)
     actions = models.TextField(null=True, blank=True)
     legendary_actions = models.TextField(null=True, blank=True)
