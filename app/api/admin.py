@@ -67,6 +67,7 @@ class MonsterAdmin(admin.ModelAdmin):
     )
     inlines = [
         MonsterMovementSpeedInline,
+        MonsterLanguageInline,
         MonsterSavingThrowInline,
         MonsterSkillInline,
         MonsterSenseInline,
