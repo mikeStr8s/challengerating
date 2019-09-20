@@ -11,7 +11,8 @@ class MonsterListSerializer(serializers.HyperlinkedModelSerializer):
 
 class MonsterSerializer(serializers.BaseSerializer):
     def to_representation(self, obj):
-        return {
+        # Serialize all values in the monster object in better categories
+        rep = {
             'name': obj.name,
             'armor_class': str(obj.armor_class),
             'hit_points': obj.hit_points,
@@ -33,9 +34,19 @@ class MonsterSerializer(serializers.BaseSerializer):
             'senses': { str(s.sense): s.note for s in obj.senses.all() },
             'languages': { str(l.language): l.note for l in obj.languages.all() },
             'condition_immunities': [ str(c) for c in obj.condition_immunities.all() ],
-            'traits': obj.traits,
-            'actions': obj.actions,
             'legendary_actions': obj.legendary_actions,
+            'actions': obj.actions,
             'reactions': obj.reactions,
+            'traits': obj.traits,
             'img_url': obj.img_url
         }
+        
+        # Find entries that are empty and remove them from the object serialization
+        empty = []
+        for key in rep:
+            if not rep[key]:
+                empty.append(key)
+        for key in empty:
+            rep.pop(key)
+        
+        return rep
