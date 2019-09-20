@@ -64,6 +64,9 @@ class MonsterAdmin(admin.ModelAdmin):
             'classes': ('collapse',),
             'fields': ('legendary_actions',)
         }),
+        ('Image', {
+            'fields': ('img_url',)
+        }),
     )
     inlines = [
         MonsterMovementSpeedInline,
