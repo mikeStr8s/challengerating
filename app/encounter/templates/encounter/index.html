@@ -1,21 +1,16 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Dungeons, Dragons, Dungeons and Dragons, dnd, d&d, encounter, builder, monsters">
-    <meta name="description" content="Dungeons and Dragons encounter management tool and monster database.">
-    <meta name="author" content="MikeStr8s">
-    <title>Challenge Rating</title>
-    <script type="text/javascript" src="{% static "encounter/vue.js" %}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static "encounter/index.js" %}"></script>
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> {% endcomment %}
-    {% block head %}{% endblock %}
-</head>
-<body>
+
+{% block head %}{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block page_script %}
+<script type="text/javascript" src="{% static "encounter/index.js" %}"></script>
 <script>
-$(document).ready(getMonsterList("{% url 'monster-list' %}"));
+let endpoints = {
+    monster_list: "{% url 'monster-list' %}",
+};
+$(document).ready(loadPage(endpoints));
 </script>
-</body>
-</html>
+{% endblock %}
