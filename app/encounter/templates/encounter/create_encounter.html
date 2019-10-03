@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block page_script %}
+<script type="text/javascript" src="{% static "encounter/api.js" %}"></script>
+<script>
+let endpoints = {
+    monster_list: "{% url 'monster-list' %}",
+};
+$(document).ready(loadPage(endpoints));
+</script>
+{% endblock %}

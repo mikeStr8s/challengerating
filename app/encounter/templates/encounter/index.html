@@ -3,14 +3,27 @@
 
 {% block head %}{% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Challenge Rating - Encounter Manager</h1>
+    <p class="lead">Build, run, revisit, revise. Encounter's are tools for DM's to use to create a better player experience.</p>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col">
+            <p>Build a new encounter for an upcoming session, or build one in real-time for your player's current session.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Build</a>
+        </div>
+        <div class="col">
+            <p>View all of your encounters to begin running, maintaining, or cateloging all encounters that you own or participate in.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">View</a>
+        </div>
+        <div class="col">
+            <p>Connect to an encounter started by your dungeon master to participate and interract.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Connect</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block page_script %}
-<script type="text/javascript" src="{% static "encounter/index.js" %}"></script>
-<script>
-let endpoints = {
-    monster_list: "{% url 'monster-list' %}",
-};
-$(document).ready(loadPage(endpoints));
-</script>
 {% endblock %}
